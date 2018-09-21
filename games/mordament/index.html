@@ -1,6 +1,23 @@
-<html>
-<h2>山寨版Wordament（某win8游戏）</h2>
-<p>2分钟内，通过拖动鼠标在八连通网格内找出尽可能多的单词。</p>
-<a href="https://xjos.org/lab/mdmt/mdmt.html">开始游戏</a>
-<p>——zzk</p>
+<!DOCTYPE html>
+<html oncontextmenu="return false" onselectstart="return false">
+	<head>
+		<title>Mordament</title>
+		<meta charset="UTF-8">
+		<link href="./mdmt.css" rel="stylesheet">
+		<script src="./jQuery.js"></script>
+	</head>
+	
+	<body onmousedown="mousedn(event)" onmouseup="mouseup(event)">
+		<div name="leftzone">
+			<div name="currentwd"></div>
+			<div name="matrix"></div>
+		</div>
+		<div name="rightzone">
+		</div>
+		
+		<script src="./dict.js"></script>
+		<script src="./mdmt.js"></script>
+
+	</body>
+	
 </html>
