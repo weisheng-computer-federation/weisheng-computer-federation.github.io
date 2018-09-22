@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>微笙计协-自动诗人</title>
+	</head>
+	<h1>
+		自动诗人------>一个自动写"诗"的软件
+	</h1>
+	<h2>
+		made by lyx(微笙计协)
+	</h2>
+	<h3>
+		即使是猴子,只要在打字机上不停敲键盘,它迟早能打出一本莎士比亚全集. ----猴子定理
+	</h3>
+	<h4>
+		<del>lyx(划掉)</del>计算机当然也可以. ----added by Beautyyu言醴
+	</h4>
+	<h3>
+		浣溪纱
+	</h3>
+	<pre>
+<code>
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+string
+zzp[200] ={&quot;翠叶残&quot;,&quot;上玉钩&quot;,&quot;挂玉钩&quot;,&quot;过橘洲&quot;,&quot;庭院虚&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;},
+zpp[200] ={&quot;度春风&quot;,&quot;绿波间&quot;,&quot;忆潇湘&quot;,&quot;玉笙寒&quot;,&quot;倚阑干&quot;,&quot;思悠悠&quot;,&quot;锁重楼&quot;,&quot;雨中愁&quot;,&quot;接天流&quot;,&quot;恨春残&quot;,&quot;画堂前&quot;,&quot;凭朱栏&quot;,&quot;锦衾寒&quot;,&quot;入长安&quot;,&quot;满重湖&quot;,&quot;不可遮&quot;,&quot;已无花&quot;,&quot;鬓先华&quot;,&quot;楚天长&quot;,&quot;是归家&quot;},
+pzz[200] ={&quot;何限恨&quot;,&quot;云外信&quot;,&quot;春色暮&quot;,&quot;流水淡&quot;,&quot;闲院宇&quot;,&quot;晴日暖&quot;,&quot;香烬落&quot;,&quot;花淡薄&quot;,&quot;罗幌卷&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;},
+zpz[200] ={&quot;共憔悴&quot;,&quot;君莫怪&quot;,&quot;窗外雨&quot;,&quot;映枝转&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;},
+zz[500] ={&quot;菡萏&quot;,&quot;细雨&quot;,&quot;照壁&quot;,&quot;指点&quot;,&quot;东风&quot;,&quot;翠叶&quot;,&quot;暗想&quot;,&quot;咫尺&quot;,&quot;旧书&quot;,&quot;夜夜&quot;,&quot;&quot;},
+pp[140] ={&quot;相思&quot;,&quot;伤心&quot;,&quot;山河&quot;,&quot;姑苏&quot;,&quot;倾城&quot;,&quot;韶光&quot;,&quot;阑干&quot;,&quot;悠悠&quot;,&quot;悠悠&quot;,&quot;芭蕉&quot;,&quot;征鸿&quot;,&quot;天涯&quot;,&quot;今朝&quot;,&quot;珠帘&quot;},
+pz[100] ={&quot;明月&quot;,&quot;携手&quot;,&quot;凝睇&quot;,&quot;回首&quot;,&quot;青鸟&quot;,&quot;流水&quot;,&quot;千载&quot;,&quot;菱蔓&quot;,&quot;画堂&quot;,&quot;青嶂&quot;},
+zp[800] ={&quot;玉笙&quot;,&quot;泪珠&quot;,&quot;绿波&quot;,&quot;江山&quot;,&quot;宫殿&quot;,&quot;藕花&quot;,&quot;莲叶&quot;,&quot;几时&quot;};
+set&lt;string&gt; if_use;
+string rand_(string *t){
+        int k,cnt = 0;
+        while(t[cnt] != &quot;&quot;) ++cnt;
+        do{
+                k = rand() % cnt;
+        }while(if_use.count(t[k]));
+        if_use.insert(t[k]);
+        int a = 0,b = 10000000;
+        while (b--){
+                ++ a;
+        }
+        return t[k];
+}
+
+int main() {
+        srand(time(NULL));
+        cout &lt;&lt; &quot;摊破·浣溪沙&quot; &lt;&lt;endl&lt;&lt;endl;
+                cout&lt;&lt;rand_(zz)&lt;&lt;rand_(pp)&lt;&lt;rand_(zzp)&lt;&lt;&quot;,&quot;;
+                cout &lt;&lt;rand_(pp)&lt;&lt;rand_(pz)&lt;&lt;rand_(zpp)&lt;&lt;&quot;。&quot;&lt;&lt;endl;
+                cout&lt;&lt;rand_(pz)&lt;&lt;rand_(pp)&lt;&lt;rand_(zpz)&lt;&lt;&quot;，&quot;;
+                cout&lt;&lt;rand_(zpp)&lt;&lt;&quot;。&quot;&lt;&lt;endl;
+                //----------------
+                cout&lt;&lt;rand_(zz)&lt;&lt;rand_(pp)&lt;&lt;rand_(zzp)&lt;&lt;&quot;,&quot;;
+                cout &lt;&lt;rand_(pp)&lt;&lt;rand_(pz)&lt;&lt;rand_(zpp)&lt;&lt;&quot;。&quot;&lt;&lt;endl;
+                cout&lt;&lt;rand_(pz)&lt;&lt;rand_(zp)&lt;&lt;rand_(pzz)&lt;&lt;&quot;，&quot;;
+                cout&lt;&lt;rand_(zpp)&lt;&lt;&quot;。&quot;&lt;&lt;endl;
+}
+
+</code>
+	</pre>
+
+</html>
