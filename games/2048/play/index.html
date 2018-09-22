@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="微笙无上计算机协会,2048游戏"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>[Ivan-微笙计协]2048</title>
+		<script src="../assets/js/jquery-1.11.0.js"></script>
+		<script src="../assets/js/jquery.gameseries.js"></script>
+		<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../assets/css/gameseries.css" rel="stylesheet">
+		<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body>
+		<div id="preload">
+			<div id="preload-gif">
+				<img src="assets/img/gameseries-001/loading.gif" alt="loading" />
+				<p>资源加载中<span id="loaded">0</span>/<span id="loading">0</span></p>
+			</div>
+		</div>
+		
+		<div id="menus">
+			<div id="hidden-menus">
+				<span class="glyphicon glyphicon-arrow-left" title="退出" onclick="$.fn.quitGame();"></span>
+				<span id="game-pause" title="暂停/继续" class="glyphicon glyphicon-pause" onclick="$.fn.pauseGame();"></span>
+				<span id="game-volume" title="音量开/关" class="glyphicon glyphicon-volume-up" onclick="$.fn.volume();"></span>
+			</div>
+			<div>
+				<span id="show-menus" data-menus="off" title="显示/隐藏菜单" class="glyphicon glyphicon-chevron-left"></span>
+			</div>
+		</div>
+		
+		<div id="mask">
+			<div id="score" class="container">
+				<p>游戏结束！感谢您的游玩！</p>
+				<p>您的成绩：<span id="result"></span></p>
+				<p>最高成绩：<span id="highScore"></span></p>
+				<nav>
+					<button class="btn btn-warning">提交</button>
+					<button class="btn btn-info" onclick="$.fn.share();">分享</button>
+					<button class="btn btn-danger" onclick="location.reload();">重玩</button>
+				</nav>
+				<p>made by Ivan(微笙计协)</p>
+			</div>
+		</div>
+		<canvas id="canvas" width="576" height="776"></canvas>
+		<script src="../assets/js/gameseries-001.js"></script>
+	</body>
+</html>
