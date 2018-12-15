@@ -1,0 +1,29 @@
+html,body{
+    position: relative;
+    height: 100%;
+}
+h1{
+    font-size: 300%;
+    text-align: center;
+}
+div{
+    position: relative;
+    bottom: -100px;
+}
+#continue_1s{
+    position: relative;
+    bottom: 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 400%;
+    text-align: center;
+    opacity: 0.5;
+}
+#time_{
+    margin: 0px;
+    font-size: 500%;
+    text-align: center;
+}
+#footer_{
+    position: fixed;
+    bottom: 0%;
+}
