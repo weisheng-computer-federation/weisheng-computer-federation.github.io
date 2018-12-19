@@ -9,6 +9,7 @@ h1{
 div{
     position: relative;
     bottom: -100px;
+    text-align: center;
 }
 #continue_1s{
     position: relative;

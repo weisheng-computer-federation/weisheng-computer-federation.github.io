@@ -1,5 +1,6 @@
 #title_ {
     text-align: center;
+    color: azure;
 }
 #play {
     margin: 300px auto auto auto;
@@ -22,5 +23,4 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center center;
 }

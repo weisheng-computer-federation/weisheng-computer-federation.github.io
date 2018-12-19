@@ -10,7 +10,6 @@ function begin_(){
     range[1] = Number(document.getElementById("range_high").value);
     var flag = 0;
     for (var i = range[0];i <= range[1];++ i){
-        console.log(i);
         if (vis[i] != 1){
             flag = 1;
             break;
