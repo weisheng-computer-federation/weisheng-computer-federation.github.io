@@ -24,7 +24,7 @@ function begin_(){
         while(vis[res] == 1)
             res = Math.floor(Math.random() * (range[1] - range[0] + 1)) + range[0];
         document.getElementById("number_").innerHTML = res;
-    },100);
+    },30);
 }
 function stop_(){
     status_ = 0;
