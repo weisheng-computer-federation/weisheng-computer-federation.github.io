@@ -22,5 +22,5 @@ html {
     background-image: url("pics/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
 }
