@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>1699录题机</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <p>
+        使用说明: 1. 在下面的框中分别输入题面, 选项, 答案, 答案只能为**大写字母A, B, C, D**中的一个</br>
+        2. 点击确认完成格式化录入, 点击撤回删除上一题</br>
+        3. 完成录入后将输出框内的内容复制发给命题组负责人
+    </p>
+    <p style="color:red">切勿刷新页面 否则已录入题目将不会保存</p>
+    <div>
+        题面: <input class="readin" type="text" name="qestion"></br>
+        选项A: <input class="readin" type="text" name="answerA"></br>
+        选项B: <input class="readin" type="text" name="answerB"></br>
+        选项C: <input class="readin" type="text" name="answerC"></br>
+        选项D: <input class="readin" type="text" name="answerD"></br>
+        答案: <input class="readin" type="text" name="correctAnswer"></br>
+        <button onclick="submit()">确认!</button>
+        <button onclick="withdraw()">撤回!</button>
+    </div>
+    </br>
+    <p id="count"></p>
+    </br>
+    <p>格式化输出:</p>
+    <div id="output" style="border:soild; border-style:solid">
+        pwpppppp
+    </div>
+</body>
+</html>
