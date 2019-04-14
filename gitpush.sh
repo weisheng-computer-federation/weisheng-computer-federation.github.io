@@ -1,2 +1,2 @@
-git push coding master
-git push github master
+git push coding dev
+git push github dev
