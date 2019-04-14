@@ -1,2 +1,2 @@
-git pull github master
-git pull coding master
+git pull github dev
+git pull coding dev
