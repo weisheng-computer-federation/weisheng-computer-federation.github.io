@@ -1,4 +1,16 @@
 /* index */
+/* slider */
+#slider{
+    overflow: hidden;
+}
+#slider>div{
+    position: absolute;
+    overflow: hidden;
+    user-select: none;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+}
 /* description */
 #description>#general-description{
     width: 75%;
@@ -23,12 +35,16 @@
 }
 /* activities */
 #activities>.secondary-card{
+    cursor: pointer;
     width: 40%;
 }
 /* projects */
 #projects>p{
     text-align: right;
     margin: 0;
+}
+#projects>.secondary-card{
+    cursor: pointer;
 }
 /* administrators */
 #administrators>p{
@@ -37,4 +53,11 @@
 }
 #administrators>.secondary-card{
     margin: 10px 0;
+}
+/* friends */
+/* footer-card */
+.footer-card{
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
 }

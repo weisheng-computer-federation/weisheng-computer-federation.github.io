@@ -7,15 +7,27 @@
     <title>微笙无上计算机协会</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/index.css"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
 </head>
 <body>
     <div id="header">
         <h1 onclick="window.open('/')">微笙无上计算机协会</h1>
         <h2>Weisheng Computer Federation</h2>
+        <p>
+            <a href="https://github.com/weisheng-computer-federation"><img src="/source/github.svg"></a>
+            <a href="https://user.qzone.qq.com/2963895971"><img src="/source/qzone.svg"></a>
+            <a href="//shang.qq.com/wpa/qunwpa?idkey=d3b03b50264a1b654fa86d406da48e1c459e9c24a65d5bdc95b350d5696d1c62"><img src="/source/tencentqq.svg"></a>
+        </p>
     </div>
     <div id="container">
+        <div class="card" id="slider">
+            <div><a href="https://www.baidu.com"><img src="https://s1.ax1x.com/2018/10/13/iNXJht.md.jpg"></a></div>
+            <div><a><img src="https://s2.ax1x.com/2019/02/24/k4R4De.jpg"></a></div>
+        </div>
         <div class="card content" id="description">
             <h3>社团简介</h3>
+            <div class="comment">这是啥社团来着?</div>
             <div id="general-description">
                 微笙计协,全称微笙无上计算机协会,是一个基于计算机,结合开展游戏活动以及利用技术为校园成员提供便利的协会,下设四个部门:管理部,数独部,代码设计部,多媒体设计部.在外参与的活动有：全国青少年信息学奥林匹克联赛、全国中小学电脑制作活动、登峰杯全国中学生学术科技创新大赛等。对内开展培训教学，涉及算法研究与设计、软件应用与开发、视音频剪辑与制作等。同时，微笙也积极参与其他交流、研讨活动，与全国其他学校的同类社团切磋并交换意见，博采众长，发展自身，壮大自我。
             </div>
@@ -39,6 +51,7 @@
         </div>
         <div class="card content" id="activities">
             <h3>独立活动</h3>
+            <div class="comment">好像很有意思?</div>
             <div class="secondary-card">
                 <h4>1699知识竞赛</h4>
                 <img src="https://s1.ax1x.com/2018/12/12/FtE7sf.png">
@@ -52,6 +65,7 @@
         </div>
         <div class="card content" id="projects">
             <h3>开发项目</h3>
+            <div class="comment">毕竟是计算机协会嘛.</div>
             <p><a href="https://www.baidu.com">更多-></a></p>
             <div class="secondary-card people">
                 待编辑
@@ -68,6 +82,7 @@
         </div>
         <div class="card content" id="administrators">
             <h3>管理团队</h3>
+            <div class="comment"><del>O5会议</del></div>
             <p><a href="https://www.baidu.com">更多-></a></p>
             <div class="secondary-card people">
                 <img src="https://s1.ax1x.com/2018/12/12/FtE7sf.png">
@@ -84,27 +99,49 @@
         </div>
         <div class="card content" id="friends">
             <h3>友情链接</h3>
-            <div class="secondary-card people">
-                <a href="https://zyws.heppy.wang/"><img src="source/favicon.png"></a>
-                <p>微笙无上计算机协会<br>擢英中学分会</p>
+            <div class="comment">大爷们的主页</div>
+            <div class="secondary-card link" onclick="window.open('https://zyws.heppy.wang/')">
+                <img src="source/favicon.png">
+                微笙无上计算机协会-擢英中学分会
             </div>
-            <div class="secondary-card people">
-                <a href="https://beautyyuyanli.ml"><img src="https://s1.ax1x.com/2018/12/12/FtE7sf.png"></a>
-                <p>Beautyyu言醴<br>的博客</p>
+            <div class="secondary-card link" onclick="window.open('https://beautyyuyanli.ml/')">
+                <img src="https://avatars2.githubusercontent.com/u/32453863?s=400&v=4">
+                Beautyyu言醴的博客
             </div>
-            <div class="secondary-card people">
-                <a href="https://silentselene.com/"><img src="https://secure.gravatar.com/avatar/6854b1a122b4757576ee6d1a34280b81"></a>
-                <p>SilentSelene<br>的博客</p>
+            <div class="secondary-card link" onclick="window.open('https://silentselene.com/')">
+                <img src="https://secure.gravatar.com/avatar/6854b1a122b4757576ee6d1a34280b81">
+                SilentSelene的博客
             </div>
-            <div class="secondary-card people">
-                <a href="https://median-dxz.xyz/"><img src="https://median-dxz.xyz/img/avatar.png"></a>
-                <p>Median-dxz<br>的博客</p>
+            <div class="secondary-card link" onclick="window.open('https://median-dxz.xyz/')">
+                <img src="https://median-dxz.xyz/img/avatar.png">
+                Median-dxz的博客
             </div>
+            <div class="secondary-card link" onclick="window.open('https://queensferry.coding.me/')">
+                <img src="https://avatars2.githubusercontent.com/u/41495669?s=400&v=4">
+                Queensferry的博客
+            </div>
+            <div class="secondary-card link" onclick="window.open('https://blog.creedowl.xyz/')">
+                <img src="https://avatars0.githubusercontent.com/u/22554751?s=400&v=4">
+                Creedowl的博客
+            </div>
+        </div>
+        <div class="card content footer-card">
+            <h4>留言板</h4>
+            <div class="comment">来愉快地吐槽吧!</div>
+        </div>
+        <div class="card content footer-card">
+            <h4>收藏项目</h4>
+            <div class="comment">来看看有什么好康的?</div>
+        </div>
+        <div class="card content footer-card">
+            <h4>捐助我们</h4>
+            <div class="comment">吃土社团需要你的捐赠!</div>
         </div>
     </div>
     <div id="footer">
         <p>Copyright&copy;微笙无上计算机协会 2017-2019</p>
         <p>Developed by Zenyan, Ivan, Beautyyu @<a href="https://github.com/weisheng-computer-federation">Weisheng Computer Federation</a></p>
     </div>
+    <script>initialization()</script>
 </body>
 </html>
