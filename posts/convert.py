@@ -1,5 +1,8 @@
 import markdown2
 import os
+for dirName, subdirList, fileList in os.walk('./html/'):
+    for fname in fileList:
+        os.remove(dirName + fname)
 tem = open('./post.template.html', 'r').read()
 for dirName, subdirList, fileList in os.walk('./md/'):
     for fname in fileList:
