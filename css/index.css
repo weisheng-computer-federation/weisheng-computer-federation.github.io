@@ -38,6 +38,11 @@
     cursor: pointer;
     width: 40%;
 }
+@media (max-width: 1070px){
+    #activities>.secondary-card{
+        width: 100%;
+    }
+}
 /* projects */
 #projects>p{
     text-align: right;
@@ -60,4 +65,9 @@
     width: 20%;
     text-align: center;
     cursor: pointer;
+}
+@media (max-width: 1070px){
+    .footer-card{
+        width: 80%;
+    }
 }
