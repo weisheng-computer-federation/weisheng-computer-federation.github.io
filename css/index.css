@@ -5,6 +5,9 @@
 }
 #slider>div{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     user-select: none;
     border-radius: 7px;

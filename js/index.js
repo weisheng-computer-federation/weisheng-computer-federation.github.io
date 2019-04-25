@@ -5,8 +5,6 @@ function initialization(){
     imgs = $("#slider>div");
     for (let i = 0; i < imgs.length; ++ i){
         $(imgs[i]).css("height", $("#slider")[0].offsetHeight + "px");
-        console.log($("#slider>div>a>img")[i].offsetHeight);
-        $($("#slider>div>a>img")[i]).css("margin-top", ($("#slider")[0].offsetHeight - $("#slider>div>a>img")[i].offsetHeight) / 2 + "px");
     }
     for (let i = 1; i < imgs.length; ++ i){
         $(imgs[i]).fadeOut(0);
