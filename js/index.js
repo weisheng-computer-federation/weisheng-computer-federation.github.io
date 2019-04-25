@@ -1,10 +1,12 @@
 var imgs, slider_alarm, slider_index = 0;
 function initialization(){
     $("#slider").css("height", Math.floor($("#slider")[0].offsetWidth / 3) + "px");
+    $("#slider>div>a>img").css("width", $("#slider")[0].offsetWidth + "px");
     imgs = $("#slider>div");
     for (let i = 0; i < imgs.length; ++ i){
-        $("#slider>div>a>img").css("width", $("#slider")[0].offsetWidth + "px");
         $(imgs[i]).css("height", $("#slider")[0].offsetHeight + "px");
+        console.log($("#slider>div>a>img")[i].offsetHeight);
+        $($("#slider>div>a>img")[i]).css("margin-top", ($("#slider")[0].offsetHeight - $("#slider>div>a>img")[i].offsetHeight) / 2 + "px");
     }
     for (let i = 1; i < imgs.length; ++ i){
         $(imgs[i]).fadeOut(0);
