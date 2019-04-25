@@ -100,7 +100,8 @@ body{
     margin: 10px;
     padding: 2.5% 2.5%;
     background-color: rgba(236, 236, 236, 0.21);
-    box-shadow:0 0 0px 0.3px rgba(0, 0, 0, 0.5);
+    /* box-shadow:0 0 0px 0.3px rgba(0, 0, 0, 0.5); */
+    border: solid 1px #ddd;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -108,7 +109,7 @@ body{
     transition-duration: 0.3s;
 }
 .secondary-card:hover{
-    box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 0 7px 0.3px rgba(0, 0, 0, 0.23);
 }
 .secondary-card>img{
     width: 100%;
