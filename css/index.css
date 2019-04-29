@@ -46,6 +46,12 @@
         width: 100%;
     }
 }
+/* subsite */
+#subsite{
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+}
 /* projects */
 #projects>p{
     text-align: right;
