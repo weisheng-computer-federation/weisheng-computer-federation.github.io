@@ -53,13 +53,6 @@
     cursor: pointer;
 }
 /* projects */
-#projects>p{
-    text-align: right;
-    margin: 0;
-}
-#projects>.secondary-card{
-    cursor: pointer;
-}
 /* administrators */
 #administrators>p{
     text-align: right;
