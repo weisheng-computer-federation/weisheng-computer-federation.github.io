@@ -116,6 +116,7 @@ body{
 }
 .people.secondary-card{
     width: 10em;
+    margin: 10px 0;
 }
 .people>p{
     text-align: center;
@@ -190,10 +191,6 @@ body{
 }
 .content a{
     color: rgba(0, 86, 52, 0.78);
-}
-.content.post img{
-    height: 400px;
-    margin: 20px;
 }
 .content ol, ul{
     width: 100%;
