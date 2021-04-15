@@ -88,7 +88,7 @@ QQ</a>
 
 
         <div class="card content" id="description">
-            <h3>社团简介</h3>
+            <h2>社团简介</h2>
             <div class="comment">这是啥社团来着？</div>
             <div id="general-description">
                 微笙计协，全称微笙无上计算机协会，是一个基于计算机，结合开展游戏活动以及利用技术为校园成员提供便利的协会，下设四个部门：管理部，数独部，代码设计部，多媒体设计部。在外参与的活动有：全国青少年信息学奥林匹克联赛、全国中小学电脑制作活动、登峰杯全国中学生学术科技创新大赛等。对内开展培训教学，涉及算法研究与设计、软件应用与开发、视音频剪辑与制作等。同时，微笙也积极参与其他交流、研讨活动，与全国其他学校的同类社团切磋并交换意见，博采众长，发展自身，壮大自我。
@@ -130,7 +130,7 @@ QQ</a>
             <p>微笙计协收集的报刊类文章站点</p>
         </div>
         <div class="card content post" id="projects">
-            <h3>开发项目</h3>
+            <h2>开发项目</h2>
             <div class="comment">毕竟是计算机协会嘛。</div>
             <h4>校园门户</h4>
 
@@ -195,6 +195,7 @@ QQ</a>
             </div>
             <p><a href="/posts/html/历届管理团队.html">更多-></a></p>
         </div>
+
         <div class="card content" id="friends">
             <h3>友情链接</h3>
             <div class="comment">大爷们的主页</div>
@@ -249,37 +250,6 @@ QQ</a>
 </body>
 </html>
 
-<script>
-    updatePostStats(
-        $(".post-view-count").map(function () { return this.dataset.postId }).get(),
-        function(id, count) { $(".post-view-count[data-post-id=" + id + "]").text("阅读(" + count + ")") },
-        function(id, count) { $(".post-comment-count[data-post-id=" + id + "]").text("评论(" + count + ")") },
-        function(id, count) { $(".post-digg-count[data-post-id=" + id + "]").text("推荐(" + count + ")") });
-</script>
-    </div><!--end: forFlow -->
-    </div><!--end: mainContent 主体内容容器-->
-    <div id="sideBar">
-        <div id="sideBarMain">
-            <div id="sidebar_news" class="newsItem">
-            <script>loadBlogNews();</script>
-</div>
-<div id="sidebar_c3"></div>
-            <div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>          
-            <div id="leftcontentcontainer">
-                <div id="blog-sidecolumn"></div>
-                    <script>loadBlogSideColumn();</script>
-            </div>          
-        </div><!--end: sideBarMain -->
-    </div><!--end: sideBar 侧边栏容器 -->
-    <div class="clear"></div>
-    </div><!--end: main -->
-    <div class="clear"></div>
-    <div id="footer">
-        <!--done-->
-
-    </div><!--end: footer -->
-</div><!--end: home 自定义的最大容器 -->
-
 
     <div id="page_end_html">
         <style id="ceshicss">
@@ -304,20 +274,7 @@ QQ</a>
 <script src="https://blog-static.cnblogs.com/files/miluluyo/cute-cnblogs2.js"></script>
 
 <script>
-  /*在文章页面添加古诗词*/
-  $("#navigator").after('<div class="poem-wrap"><div class="poem-border poem-left"></div><div class="poem-border poem-right"></div><h1>念两句诗</h1><div id="poem_sentence"></div><div id="poem_info"></div></div>')
-</script>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-<script type="text/javascript">
-  jinrishici.load(function(result) {
-    var sentence = document.querySelector("#poem_sentence")
-    var info = document.querySelector("#poem_info")
-    sentence.innerHTML = result.data.content
-    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-  });
-</script>
 
-<!--音乐，只在PC端宽度>1000px时显示-->
 <link rel="stylesheet" href="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.css">
 <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="5460484417" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
 <script src="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.js"></script>
@@ -328,8 +285,5 @@ QQ</a>
 $('#sideBarMain').append('')
 
 </script>
-    </div>
-
-    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAju-L4X148g-7-lbx9ClLDhkj6oDH2WAl09YDkS6uso2AeKwAPQBxZQ8sYX20G9KxyLpGxLccfFIny31-WBnfQKOT0K3p2t4p_z1P4u9gLqw_9L691UGgXTTNMexPuN9tal74fsxJWR42swPgMjrcFU5vTIMPXHxTs9_euhGDy_e_A" />
 </body>
 </html>
