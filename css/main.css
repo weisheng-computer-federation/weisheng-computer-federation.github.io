@@ -7,14 +7,38 @@ body, html{
     overflow-x: hidden;
 }
 body{
-    margin: 0;
-	background-color: #EEEEEE;
-	background-image: url('/source/header.jpg');
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size:auto 75%;
-    background-attachment: fixed;
+    background:url(https://images.cnblogs.com/cnblogs_com/misaka1932/1947878/o_21031509220688087308_p0_master1200.jpg) center center / cover no-repeat #222;
+    overflow:hidden;
+    width:100%;
+    height:40vh;
+    max-height:40vh;
+    box-shadow:0 1px 2px rgba(150, 150, 150, .7);
+    text-align:center;
+    display:table
+    cursor:url(https://files-cdn.cnblogs.com/files/miluluyo/cursora.ico), auto
 }
+body::after {
+    content:"";
+    background-repeat:no-repeat;
+    background-position:center;
+    opacity:.06;
+    -webkit-filter:grayscale(100%);
+    -moz-filter:grayscale(100%);
+    -ms-filter:grayscale(100%);
+    -o-filter:grayscale(100%);
+    filter:grayscale(100%);
+    filter:gray;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1
+}
+body::after {
+    background-image:url(http://img.xjh.me/random_img.php?type=bg&ctype=acg&return=302)
+}
+
 /* header */
 #header{
     width: 100%;
@@ -32,7 +56,7 @@ body{
 #header>h2{
 	color: rgb(51, 51, 51);
 	text-shadow: 1px 1px 6px #fff;
-	font-size:2em;
+	font-size:3em;
 	margin: 0;
 }
 #header>p{
