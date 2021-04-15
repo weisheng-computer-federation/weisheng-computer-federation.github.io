@@ -172,7 +172,7 @@ body,textarea,input,button,select,keygen,legend {
 .vertical h2 {
     margin: 0;
     font-size: 1rem;
-    line-height: 1.5em;
+    line-height: 2em;
     font-weight: 400;
     letter-spacing: .01rem;
     color: rgba(255,255,255,0.8);
