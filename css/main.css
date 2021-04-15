@@ -871,12 +871,12 @@ div#home::after {
     background-repeat: no-repeat;
     background-position: center;
     opacity: .06;
-    -webkit-filter: grayscale(100%);
+    /*-webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: gray;
+    filter: gray;*/
     position: fixed;
     top: 0;
     left: 0;
