@@ -144,7 +144,7 @@ body,textarea,input,button,select,keygen,legend {
     width: 100%;
     height: 40vh;
     max-height: 40vh;
-    box-shadow: 0 1px 2px rgba(150,150,150,0.7);
+    box-shadow: 0 1px 2px rgba(150,150,150,0.3);
     text-align: center;
     display: table
 }
@@ -934,7 +934,7 @@ div#footer {
     font-size: 2rem;
     font-weight: 400;
     color: #606975;
-    text-shadow: 0 3px 6px rgba(0,0,0,0.9)
+    text-shadow: 0 3px 6px rgba(0,0,0,0)
 }
 
 #cnblogs_post_body {
@@ -1021,7 +1021,7 @@ a#pink_channel_admire {
 
 #author_profile_info img.author_avatar {
     border-radius: 100%;
-    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.8),0 1px 3px rgba(0,0,0,0.8);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0),0 1px 3px rgba(0,0,0,0);
     border: 3px solid #f7f7f7;
     padding: 0;
     margin-left: 3px;
@@ -1334,7 +1334,7 @@ use {
 .attention span {
     color: #fff;
     margin: 4px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0);
     width: 80px;
     height: 80px;
     display: inline-block;
@@ -1371,7 +1371,7 @@ use {
     width: 10px;
     margin: 10px;
     position: relative;
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px rgba(0,0,0,0);
     animation: bouncer cubic-bezier(.455,.03,.515,.955) .75s infinite alternate
 }
 
@@ -1427,7 +1427,7 @@ use {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
     border-radius: 100%;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.8);
+    box-shadow: 0 2px 6px rgba(0,0,0,0);
     background: #fff;
     text-align: center;
     line-height: 32px;
