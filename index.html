@@ -119,7 +119,6 @@ QQ</a>
              .focusBtn li{width:10px;height: 10px;background: rgba(0,0,0,0.8);border-radius:
              50%;display: inline-block;margin: 0 2px} .focusBtn .on{background: green;}
         </style>
-        <div class="focus">
             <div class="bigPicH">
                 <div class="bigPic">
                     <a href="/posts/html/2019社团节.html">
@@ -141,10 +140,6 @@ QQ</a>
             <script>
                 var imgWidth = $(".bigPic a img").width() //获取图片的宽度
                 var imgHeight = $(".bigPic a img").height() //获取图片的高度
-                $(".focus").css({
-                    "width": imgWidth,
-                    "height": imgHeight
-                }) //设置 focus的宽高为图片的宽高
                 var getBtnTop = (imgHeight - 50) / 2 //计算左右翻面按钮的值
                 $(".leftBtn,.rightBtn").css({
                     "top": getBtnTop
