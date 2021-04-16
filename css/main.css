@@ -164,16 +164,16 @@ body,textarea,input,button,select,keygen,legend {
     text-shadow: 0 3px 6px rgba(0,0,0,0.8);
     margin: 10px 0 10px 0;
     letter-spacing: -1px;
-    font-weight: 700;
+    font-weight: 300;
     animation: fade-in-down 1s both;
     animation-delay: .5s
 }
 
 .vertical h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 2.5em;
-    font-weight: 400;
+    font-weight: 200;
     letter-spacing: .01rem;
     color: rgba(255,255,255,0.8);
     -webkit-animation: fade-in-down .9s;
