@@ -22,51 +22,6 @@
     <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css”>
     <script type=”text/javascript” src=”https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js”></script>
     <script src=”https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js”></script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        .box {
-            width: 800px;
-            height: 100px;
-            margin: 0 auto;
-            overflow: hidden;
-            border: 1px solid pink;
-            position: relative;
-        }
-
-        .imgList {
-            animation:rolling 18s linear infinite;
-            position: absolute;
-            display: flex;
-        }
-
-        img {
-            height: 100px;
-            float: left;
-            margin-right: 10px;
-        }
-
-        @keyframes rolling {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-        </style>
 </head>
 
 <div id="home">
@@ -129,12 +84,190 @@ QQ</a>
       });
     </script>
 
-
-    <div class="box">
-        <div class="imgList">
+<!--
+    <div id="container">
+        <div id="photo">
             <div><a href="/posts/html/2019社团节.html"><img src="https://s2.ax1x.com/2019/05/18/EOoE0f.jpg"></a></div>
             <div><a href="/posts/html/第四届1699杯获奖名单.html"><img src="https://s3.ax1x.com/2021/02/18/yW6G4g.jpg"></a></div>
         </div>
+-->
+<head>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+    <body>
+        <style>
+            *{margin: 0;padding: 0;list-style: none;font-size: 12px;font-family:"微软雅黑";text-decoration:none;}
+             /*清除所有浏览器自带的样式*/ 
+             .focus{position: relative;width:800px;height: 300px;margin:auto;} 
+             .bigPicH{width:100%;height: 100%;position: relative;overflow: hidden}
+             .bigPic{position: absolute;width:20000px;} .bigPic a{float: left;} .leftBtn,.rightBtn{cursor:
+             pointer;width:40px;height: 50px;background: rgba(0,0,0,0.4);position: absolute;top:125px;text-align:
+             center;color: white;line-height: 50px;font-size:15px;} .leftBtn{left:0px;}
+             .leftBtn:hover,.rightBtn:hover{background:#464646} .rightBtn{right:0px;}
+             .focusBtn{position: absolute;bottom:10px;text-align: center;width:100%}
+             .focusBtn li{width:10px;height: 10px;background: rgba(0,0,0,0.8);border-radius:
+             50%;display: inline-block;margin: 0 2px} .focusBtn .on{background: green;}
+        </style>
+        <div class="focus">
+            <div class="bigPicH">
+                <div class="bigPic">
+                    <a href="/posts/html/2019社团节.html">
+                        <img src="/source/社团节.jpg">
+                    </a>
+                    <a href="/posts/html/第四届1699杯获奖名单.html">
+                        <img src="/source/1699.jpg">
+                    </a>
+                </div>
+            </div>
+            <ul class="focusBtn">
+            </ul>
+            <div class="leftBtn">
+                <</div>
+                    <div class="rightBtn">
+                        >
+                    </div>
+            </div>
+            <script>
+                var imgWidth = $(".bigPic a img").width() //获取图片的宽度
+                var imgHeight = $(".bigPic a img").height() //获取图片的高度
+                $(".focus").css({
+                    "width": imgWidth,
+                    "height": imgHeight
+                }) //设置 focus的宽高为图片的宽高
+                var getBtnTop = (imgHeight - 50) / 2 //计算左右翻面按钮的值
+                $(".leftBtn,.rightBtn").css({
+                    "top": getBtnTop
+                }) //设置左右翻面按钮的top值
+                var imgNum = $(".bigPic a").length //获取图片的个数
+                var numliend = imgNum - 1 //序号从零开始，所以减一，得出li标签的数
+                var imgNum2 = imgNum; //每滚一次减一，等于零时返回原来的图片个数
+                var imgWidthAll = -imgWidth * imgNum //计算滚到底的总距离
+                var imgNunR = imgNum * 2
+
+                var btnOn = true; //点击按钮后的开关，防止按钮被多次点击
+                var bigPicHtml = $(".bigPic").html() //获取所有的A标签和IMG内容
+                $(".bigPic").append(bigPicHtml + bigPicHtml) //把所有的A和图片复制两份一份用来左滚一份用来右滚
+                $(".bigPic").css({
+                    "left": imgWidthAll
+                }) //初始化图片的位置，三份，一份放左，一份放右
+                for (var forli = 0; forli < imgNum; forli++) {
+                    $(".focusBtn").append("<li></li>") //for循环，按图片的个数插入一样多的li标签
+                }
+
+                $(".focusBtn li").eq(0).addClass("on") //第一个li标签
+                function leftBtn() { //左边的翻页按钮
+                    if (btnOn == true) { //判断是否可点击，防止按钮被多次点击
+                        imgNum = imgNum - 1
+
+                    } else {
+                        return false;
+
+                    }
+
+                    btnOn = false
+
+                    var linum = $(".on").index() //获取当前元素的序号
+                    if (linum == 0) {
+
+                        $(".focusBtn li").eq(numliend).addClass("on").siblings().removeClass("on") //让下一个li加载样式获取当前滚到哪一张
+                    } else {
+                        $(".focusBtn li").eq(linum - 1).addClass("on").siblings().removeClass("on") //每点一次向左滚一张
+                    }
+
+                    $(".bigPic").stop().animate({
+                        "left": -imgWidth * imgNum
+                    },
+                    function() {
+                        btnOn = true
+
+                        if (imgNum == 0) { //若滚到第一张则下一张滚到最后一张
+                            $(".bigPic").css({
+                                "left": imgWidthAll
+                            })
+
+                            imgNum = imgNum2
+
+                        }
+
+                    })
+
+                }
+
+                function rightBtn() { //右边的翻页按钮
+                    if (btnOn == true) { //判断是否可点击，防止按钮被多次点击
+                        imgNum = imgNum + 1
+
+                    } else {
+                        return false;
+
+                    }
+
+                    btnOn = false
+
+                    var linum = $(".on").index()
+
+                    if (linum == numliend) {
+                        $(".focusBtn li").eq(0).addClass("on").siblings().removeClass("on")
+
+                    } else {
+                        $(".focusBtn li").eq(linum + 1).addClass("on").siblings().removeClass("on")
+
+                    }
+
+                    $(".bigPic").stop().animate({
+                        "left": -imgWidth * imgNum
+                    },
+                    function() {
+                        btnOn = true
+
+                        if (imgNum == imgNunR) {
+                            $(".bigPic").css({
+                                "left": imgWidthAll
+                            })
+
+                            imgNum = imgNum2
+
+                        }
+
+                    })
+
+                }
+
+                $(".focusBtn li").hover(function() { //鼠标停留在切换按钮上轮播图自动滚到对应的图片上面
+                    var linum2 = $(this).index()
+
+                    $(".bigPic").stop().animate({
+                        "left": -imgWidth * (linum2 + 3)
+                    })
+
+                    $(".focusBtn li").eq(linum2).addClass("on").siblings().removeClass("on")
+
+                })
+
+                timer = setInterval(rightBtn, 3000) //每3秒自动滚一次
+                $(".focus").hover(function() { //鼠标停留在轮播图上则暂停滚动
+                    clearInterval(timer)
+
+                },
+                function() {
+                    timer = setInterval(rightBtn, 3000) //鼠标离开后继续滚动
+                })
+
+                $(".leftBtn").click(function() { //每点一次左滚一张
+                    leftBtn()
+
+                })
+
+                $(".rightBtn").click(function() { //每点一次右滚一张
+                    rightBtn()
+
+                })
+            </script>
+        </body>
+    </textarea>
+    </body>
+</html>
 
         <div class="card content" id="description">
             <h2>社团简介</h2>
