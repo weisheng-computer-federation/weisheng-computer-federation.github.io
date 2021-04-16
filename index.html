@@ -76,6 +76,19 @@ QQ</a>
 <script src="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.js"></script>
 <script src="https://blog-static.cnblogs.com/files/miluluyo/Meting.min.js"></script>
 
+<!-- 在文章页面添加古诗词 -->
+    <div class="poem-wrap"><div class="poem-border poem-left"></div><div class="poem-border poem-right"></div><h1>念两句诗</h1><div id="poem_sentence"></div><div id="poem_info"></div></div>')
+    </script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        jinrishici.load(function(result) {
+            var sentence = document.querySelector("#poem_sentence")
+            var info = document.querySelector("#poem_info")
+            sentence.innerHTML = result.data.content
+            info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+      });
+    </script>
+
     <!--
     <div id="container">
         <div id="photo">
@@ -83,16 +96,15 @@ QQ</a>
             <div><a href="/posts/html/第四届1699杯获奖名单.html"><img src="https://s3.ax1x.com/2021/02/18/yW6G4g.jpg"></a></div>
         </div>
     
-    
+    -->
     <head>
         <meta charset="utf-8">
         <title>
             无限循环翻页
         </title>
-        <script src="js/jquery.js">
+        <script src="js/jquery.min.js">
         </script>
     </head>
-    -->
     
     <body>
         <style>
@@ -472,19 +484,6 @@ QQ</a>
           $("#live2dcanvas").attr("style","position: fixed; opacity: 0.7; left: 70px; bottom: 0px; z-index: 1; pointer-events: none;")
         }
       }
-    </script>
-
-    <!-- 在文章页面添加古诗词 -->
-    $("#navigator").after('<div class="poem-wrap"><div class="poem-border poem-left"></div><div class="poem-border poem-right"></div><h1>念两句诗</h1><div id="poem_sentence"></div><div id="poem_info"></div></div>')
-    </script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        jinrishici.load(function(result) {
-            var sentence = document.querySelector("#poem_sentence")
-            var info = document.querySelector("#poem_info")
-            sentence.innerHTML = result.data.content
-            info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-      });
     </script>
 
 </script>
