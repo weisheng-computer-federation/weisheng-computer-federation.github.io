@@ -242,6 +242,7 @@ QQ</a>
         <p>Developed by Zenyan, Ivan, Beautyyu @<a href="https://github.com/weisheng-computer-federation">Weisheng Computer Federation</a></p>
     </div>
     
+    <!-- 加了些花里胡哨的东西 -->
     <!--音乐，只在PC端宽度>1000px时显示-->
     <link rel="stylesheet" href="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.css">
     <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="5460484417" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
@@ -249,6 +250,55 @@ QQ</a>
     <script src="https://blog-static.cnblogs.com/files/miluluyo/Meting.min.js"></script>
     </body>
     </html>
+
+    <!--猫，只在PC端显示，移动端不加载了，因为会卡顿页面-->
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+    <script>
+      var mobile_flag = isMobile();
+      if(mobile_flag){
+        //console.info("移动端")
+      }
+      else{
+        //console.info("PC端")
+        L2Dwidget.init({
+            "model": {
+                "jsonPath": "https://unpkg.com/live2d-widget-model-hijiki/assets/hijiki.model.json",
+                "scale": 1
+            },
+            "display": {
+                "position": "left",
+                "width": 100,
+                "height": 200,
+                "hOffset": 70,
+                "vOffset": 0
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+        window.onload = function(){
+          $("#live2dcanvas").attr("style","position: fixed; opacity: 0.7; left: 70px; bottom: 0px; z-index: 1; pointer-events: none;")
+        }
+      }
+    </script>
+
+    <!-- 在文章页面添加古诗词 -->
+    $("#navigator").after('<div class="poem-wrap"><div class="poem-border poem-left"></div><div class="poem-border poem-right"></div><h1>念两句诗</h1><div id="poem_sentence"></div><div id="poem_info"></div></div>')
+    </script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        jinrishici.load(function(result) {
+            var sentence = document.querySelector("#poem_sentence")
+            var info = document.querySelector("#poem_info")
+            sentence.innerHTML = result.data.content
+            info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+      });
+    </script>
 
 </script>
 </body>
