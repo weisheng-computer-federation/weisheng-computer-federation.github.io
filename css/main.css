@@ -224,8 +224,8 @@ body::after {
     content: "";
     background-repeat: no-repeat;
     background-position: center;
-    opacity: .09;
     *{filter:none!important;}
+    opacity: .09;
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -ms-filter: grayscale(0%);
@@ -261,6 +261,7 @@ body::after {
     -moz-border-radius: 7px;
     transition: all;
     transition-duration: 0.3s;
+    opacity:0.7; 
 }
 .secondary-card{
     display: flex;
@@ -278,6 +279,7 @@ body::after {
     -moz-border-radius: 20px;
     transition: all;
     transition-duration: 0.3s;
+    opacity:0.7; 
 }
 .secondary-card:hover{
     box-shadow: 0 0 7px 0.3px rgba(0, 0, 0, 0.23);
@@ -317,6 +319,7 @@ body::after {
     font-weight: 300;
     line-height: 1.4em;
     margin: 12px 0 12px 0;
+    opacity:0.7; 
 }
 .content div{
     width: 100%;
@@ -871,8 +874,8 @@ div#home::after {
     content: "";
     background-repeat: no-repeat;
     background-position: center;
-    opacity: .09;
     *{filter:none!important;}
+    opacity: .09;
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -ms-filter: grayscale(0%);
