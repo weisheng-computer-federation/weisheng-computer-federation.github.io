@@ -267,7 +267,7 @@ body::after {
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
-    margin: 10px;
+    margin: 10px 5px 10px;        /*更改左右外边距*/
     padding: 2.5% 2.5%;
     background-color: rgba(236, 236, 236, 0.21); 
     box-shadow:0 0 0px 0.3px rgba(0, 0, 0, 0.6);
